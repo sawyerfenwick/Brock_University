@@ -9,7 +9,7 @@ Course Codes:
 1P03  Intro to Data Structures  
 2P03  Advanced Data Structures  
 2P05  Programming Languages  
-2P12  Intro to Computer Systems  
+2P12  Intro to Computer Systems (MIPS and Logic Circuit required)  
 2P13  Operating Systems  
 2P89  Internet Technologies  
 2P95  Applications in C++  
