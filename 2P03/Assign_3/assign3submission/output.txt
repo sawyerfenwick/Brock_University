@@ -1,0 +1,72 @@
+run:
+1.Sort	2.Fill	3.Time Trial
+0.Quit
+1
+How many elements would you like to sort? 5
+Add: 6
+Add: 2
+Add: 9
+Add: 3
+Add: 1
+Which sorting method would you like to use?
+1.Heap Sort	2.Quick Sort	3.Merge Sort
+4.Radix Sort	5.Insertion Sort
+1
+1
+2
+3
+6
+9
+1.Sort	2.Fill	3.Time Trial
+0.Quit
+2
+Enter the number of elements to be randomly put in the array: 
+25
+Upper bound:
+1000
+Lower bound:
+0
+Which sorting method would you like to use?
+1.Heap Sort	2.Quick Sort	3.Merge Sort
+4.Radix Sort	5.Insertion Sort
+5
+24
+45
+103
+107
+134
+151
+278
+325
+331
+409
+443
+456
+466
+479
+497
+620
+624
+632
+692
+718
+807
+813
+865
+894
+938
+1.Sort	2.Fill	3.Time Trial
+0.Quit
+3
+Enter the number of elements to be stored in the array: 
+10000
+Which sort would you like to test? 
+1.Heap Sort	2.Quick Sort	3.Merge Sort
+4.Radix Sort	5.Insertion Sort
+4
+Radix Sort takes: 1ms on average.
+Radix Sort (on a sorted list) takes: 1ms on average.
+1.Sort	2.Fill	3.Time Trial
+0.Quit
+0
+BUILD SUCCESSFUL (total time: 36 seconds)
