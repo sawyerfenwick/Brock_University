@@ -1,0 +1,84 @@
+<!--Sawyer_Fenwick-->
+<!--6005011-->
+<!--sf15zx-->
+<!--Assign2-->
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+	<script type="text/javascript" src='script.js'></script>
+	<title>HP</title>
+	<script>
+	if(localStorage.getItem("arrayHP") == null){
+		var arrayHP = [];
+	}else{
+		arrayHP = JSON.parse(localStorage.getItem("arrayHP"));
+	}
+	</script>
+	<style><!--Change the color of the navbar to be HP specific-->
+		ul.navbar li a:hover:not(.active) {
+			background-color:#0096D6;
+		}
+		ul.navbar li a.active {
+			background-color:#0096D6;
+		}
+	</style><!--Checking if array exists-->
+</head>
+<body id="hp" onload="inCart(arrayHP)"><!--Display whether the item is in the cart after page load-->
+<div id="page-container">
+<div id="content-wrap">
+<header>
+	<h1 id="titlestyle" style="text-align:center">Printer Sellers Ltd.</h1>
+	<nav>
+		<ul class="navbar">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="product.html">Products</a></li>
+			<li><a href="wishlist.html">Wishlist</a></li>
+			<li><a href="faq.html">FAQ</a></li>
+			<li><a href="contact.html">Contact Us</a></li>
+		</ul>
+	</nav>
+</header>
+<div class="screensize">
+	<div class="picborder">
+		<img src="hp1.png" alt="printer1" style="width:100%; height: 48.5%">
+		<div class="info">HP DeskJet 3755 Wireless Colour All-in-One Inkjet Printer</div>
+		<div class="info">$89.99</div>
+		<div class ="info" id="carthp1"></div>
+		<button onclick="addHP('hp1')" style="display: block; margin: 0 auto;">Add to Cart</button>
+		<button onclick="removeHP('hp1')" style="display: block; margin: 0 auto;">Remove from Cart</button>
+	</div>
+</div>
+<div class="screensize">
+	<div class="picborder">
+		<img src="hp2.png" alt="printer2" style="width:100%; height:48.5%">
+		<div class="info">HP ENVY 5010 Wireless All-In-One Inkjet Printer</div>
+		<div class="info">$59.99</div>
+		<div class ="info" id="carthp2"></div>
+		<button onclick="addHP('hp2')" style="display: block; margin: 0 auto;">Add to Cart</button>
+		<button onclick="removeHP('hp2')" style="display: block; margin: 0 auto;">Remove from Cart</button>
+	</div>
+</div>
+<div class="screensize">
+	<div class="picborder">
+		<img src="hp3.png" alt="printer3" style="width:100%; height:48.5%">
+		<div class="info">HP OfficeJet 3833 Wireless All-in-One Inkjet Printer</div>
+		<div class="info">$159.99</div>
+		<div class ="info" id="carthp3"></div>
+		<button onclick="addHP('hp3')" style="display: block; margin: 0 auto;">Add to Cart</button>
+		<button onclick="removeHP('hp3')" style="display: block; margin: 0 auto;">Remove from Cart</button>
+	</div>
+</div>
+</div>
+<footer id="footer">
+<p>© Copyright 2019 HP Development Company, L.P.</p>
+<p>Promotional pricing, including discount coupon codes, are not combinable with any other offers or discounts unless 
+	otherwise specifically advertised. Availability of discounts may be limited.</p>
+<p>Not all features are available in all editions or versions of Windows. Systems may require upgraded and/or separately 
+	purchased hardware, drivers and/or software to take full advantage of Windows functionality. See https://www.microsoft.com</p>
+<p>Font obtained from https://fontlibrary.org/en/font/press-start-2p</p><!--Credit for Font-->
+<p>Images obtained from https://bestbuy.ca</p><!--Credit for Images-->
+</footer>
+</div>
+</body>
+</html>

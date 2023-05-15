@@ -1,0 +1,85 @@
+<!--Sawyer_Fenwick-->
+<!--6005011-->
+<!--sf15zx-->
+<!--Assign2-->
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src='script.js'></script><!--get JS-->
+	<link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+	<title>Canon</title>
+	<style><!--Change the color of the navbar to be Canon specific-->
+		ul.navbar li a:hover:not(.active) {
+			background-color:#BC0024;
+		}
+		ul.navbar li a.active {
+			background-color:#BC0024;
+		}
+	</style>
+	<script>
+	if(localStorage.getItem("arrayCA") == null){
+		var arrayCA = [];
+	}else{
+		arrayCA = JSON.parse(localStorage.getItem("arrayCA"));
+	}
+	</script><!--Checking if array exists-->
+</head>
+<body id="canon" onload="inCart2(arrayCA)"><!--Display whether the item is in the cart after page load-->
+<div id="page-container">
+<div id="content-wrap">
+<header>
+	<h1 id="titlestyle" style="text-align:center">Printer Sellers Ltd.</h1>
+	<nav>
+		<ul class="navbar">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="product.html">Products</a></li>
+			<li><a href="wishlist.html">Wishlist</a></li>
+			<li><a href="faq.html">FAQ</a></li>
+			<li><a href="contact.html">Contact Us</a></li>
+		</ul>
+	</nav>
+</header>
+<div class="screensize">
+	<div class="picborder">
+		<img src="c1.png" alt="printer1" style="width:100%; height: 48.5%">
+		<div class="info">Canon PIXMA TS3129 Wireless All-in-One Inkjet Printer</div>
+		<div class="info">$99.99</div>
+		<div class ="info" id="cartca1"></div>
+		<button onclick="addCA('ca1')" style="display: block; margin: 0 auto;">Add to Cart</button>
+		<button onclick="removeCA('ca1')" style="display: block; margin: 0 auto;">Remove from Cart</button>
+	</div>
+</div>
+<div class="screensize">
+	<div class="picborder">
+		<img src="c2.png" alt="printer2" style="width:100%; height:48.5%">
+		<div class="info">Canon PIXMA TR4527 Wireless All-In-One Inkjet Printer</div>
+		<div class="info">$99.99</div>
+		<div class ="info" id="cartca2"></div>
+		<button onclick="addCA('ca2')" style="display: block; margin: 0 auto;">Add to Cart</button>
+		<button onclick="removeCA('ca2')" style="display: block; margin: 0 auto;">Remove from Cart</button>
+	</div>
+	
+</div>
+<div class="screensize">
+	<div class="picborder">
+		<img src="c3.png" alt="printer3" style="width:100%; height:48.5%">
+		<div class="info">Canon PIXMA All-In-One Inkjet Printer (MX532) - Black</div>
+		<div class="info">$129.99</div>
+		<div class ="info" id="cartca3"></div>
+		<button onclick="addCA('ca3')" style="display: block; margin: 0 auto;">Add to Cart</button>
+		<button onclick="removeCA('ca3')" style="display: block; margin: 0 auto;">Remove from Cart</button>
+	</div>
+</div>
+</div>
+<footer id="footer">
+<p>© Canon Canada Inc., 2019. All rights reserved. Reproduction in whole or in part without permission is prohibited.</p>
+<p>Promotional pricing, including discount coupon codes, are not combinable with any other offers or discounts unless otherwise 
+	specifically advertised. Availability of discounts may be limited.</p>
+<p>Not all features are available in all editions or versions of Windows. Systems may require upgraded and/or separately purchased 
+	hardware, drivers and/or software to take full advantage of Windows functionality. See https://www.microsoft.com</p>
+<p>Font obtained from https://fontlibrary.org/en/font/press-start-2p</p><!--Credit for Font-->
+<p>Images obtained from https://bestbuy.ca</p><!--Credit for Images-->
+</footer>
+</div>
+</body>
+</html>
