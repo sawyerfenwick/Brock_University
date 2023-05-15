@@ -1,0 +1,36 @@
+package Assign_4;
+
+
+import BasicIO.*;
+
+/** This class describes everything a product contains; the name of the product and the cost.  
+  *
+  * @author S. Fenwick
+  *
+  * @version 1.0 (March. 2017)                                                     */
+
+public class Product {
+  
+  private int price;
+  private String name;
+  
+  public Product(ASCIIDataFile file){
+   
+    name = file.readString();
+    if( !file.isEOF() ) {
+      price = file.readInt();
+    };
+    
+  } //constructor
+  
+  public String getName(){
+    
+    return name;
+  }
+  
+  public int getPrice(){
+    
+    return price;
+  }
+
+} //Product
