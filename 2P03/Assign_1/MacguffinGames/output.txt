@@ -1,0 +1,154 @@
+run:
+---Macguffin Games---
+1. Add One 	2. Add Two	3. Add Three	4. Add Four
+5. Remove One	6. Remove Two	7. Remove Three	8. Remove Four
+		9. Test Options	0. Quit
+1
+Enter Name: Jake
+	Added [Jake]
+
+1. Add One 	2. Add Two	3. Add Three	4. Add Four
+5. Remove One	6. Remove Two	7. Remove Three	8. Remove Four
+		9. Test Options	0. Quit
+9
+One: 	true
+Two: 	false
+Three: 	false
+Four: 	false
+Count: 	1
+
+1. Add One 	2. Add Two	3. Add Three	4. Add Four
+5. Remove One	6. Remove Two	7. Remove Three	8. Remove Four
+		9. Test Options	0. Quit
+2
+First: Amy
+Second: Charles
+	Added [Amy,Charles]
+
+1. Add One 	2. Add Two	3. Add Three	4. Add Four
+5. Remove One	6. Remove Two	7. Remove Three	8. Remove Four
+		9. Test Options	0. Quit
+9
+One: 	true
+Two: 	true
+Three: 	true
+Four: 	false
+Count: 	3
+
+1. Add One 	2. Add Two	3. Add Three	4. Add Four
+5. Remove One	6. Remove Two	7. Remove Three	8. Remove Four
+		9. Test Options	0. Quit
+8
+Exception Caught [null]
+
+1. Add One 	2. Add Two	3. Add Three	4. Add Four
+5. Remove One	6. Remove Two	7. Remove Three	8. Remove Four
+		9. Test Options	0. Quit
+1
+Enter Name: Raymond
+	Added [Raymond]
+
+1. Add One 	2. Add Two	3. Add Three	4. Add Four
+5. Remove One	6. Remove Two	7. Remove Three	8. Remove Four
+		9. Test Options	0. Quit
+9
+One: 	true
+Two: 	true
+Three: 	true
+Four: 	true
+Count: 	4
+
+1. Add One 	2. Add Two	3. Add Three	4. Add Four
+5. Remove One	6. Remove Two	7. Remove Three	8. Remove Four
+		9. Test Options	0. Quit
+3
+First: Terry
+Second: Gina
+Third: Rosa
+	Added [Terry,Gina,Rosa]
+
+1. Add One 	2. Add Two	3. Add Three	4. Add Four
+5. Remove One	6. Remove Two	7. Remove Three	8. Remove Four
+		9. Test Options	0. Quit
+9
+One: 	true
+Two: 	true
+Three: 	true
+Four: 	true
+Count: 	7
+
+1. Add One 	2. Add Two	3. Add Three	4. Add Four
+5. Remove One	6. Remove Two	7. Remove Three	8. Remove Four
+		9. Test Options	0. Quit
+2
+First: Scully
+Second: Hitchcock
+	Added [Scully,Hitchcock]
+
+1. Add One 	2. Add Two	3. Add Three	4. Add Four
+5. Remove One	6. Remove Two	7. Remove Three	8. Remove Four
+		9. Test Options	0. Quit
+9
+One: 	true
+Two: 	true
+Three: 	true
+Four: 	true
+Count: 	9
+
+1. Add One 	2. Add Two	3. Add Three	4. Add Four
+5. Remove One	6. Remove Two	7. Remove Three	8. Remove Four
+		9. Test Options	0. Quit
+8
+	Removed [Jake,Amy,Charles,Raymond]
+
+1. Add One 	2. Add Two	3. Add Three	4. Add Four
+5. Remove One	6. Remove Two	7. Remove Three	8. Remove Four
+		9. Test Options	0. Quit
+9
+One: 	false
+Two: 	true
+Three: 	true
+Four: 	false
+Count: 	5
+
+1. Add One 	2. Add Two	3. Add Three	4. Add Four
+5. Remove One	6. Remove Two	7. Remove Three	8. Remove Four
+		9. Test Options	0. Quit
+6
+	Removed [Scully,Hitchcock]
+
+1. Add One 	2. Add Two	3. Add Three	4. Add Four
+5. Remove One	6. Remove Two	7. Remove Three	8. Remove Four
+		9. Test Options	0. Quit
+9
+One: 	false
+Two: 	false
+Three: 	true
+Four: 	false
+Count: 	3
+
+1. Add One 	2. Add Two	3. Add Three	4. Add Four
+5. Remove One	6. Remove Two	7. Remove Three	8. Remove Four
+		9. Test Options	0. Quit
+7
+	Removed [Terry,Gina,Rosa]
+
+1. Add One 	2. Add Two	3. Add Three	4. Add Four
+5. Remove One	6. Remove Two	7. Remove Three	8. Remove Four
+		9. Test Options	0. Quit
+9
+One: 	false
+Two: 	false
+Three: 	false
+Four: 	false
+Count: 	0
+
+1. Add One 	2. Add Two	3. Add Three	4. Add Four
+5. Remove One	6. Remove Two	7. Remove Three	8. Remove Four
+		9. Test Options	0. Quit
+0
+
+1. Add One 	2. Add Two	3. Add Three	4. Add Four
+5. Remove One	6. Remove Two	7. Remove Three	8. Remove Four
+		9. Test Options	0. Quit
+BUILD SUCCESSFUL (total time: 1 minute 8 seconds)
