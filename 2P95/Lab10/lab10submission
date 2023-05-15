@@ -1,0 +1,7 @@
+#!/bin/bash
+#Sawyer Fenwick
+#6005011
+#sf15zx@brocku.ca
+#COSC 2P95 Lab Exercise 10
+# This downloads the files using wget and displays to the console ONLY the difference between the two files. Line endings are LF not CR-LF.
+diff <(wget -O - "https://www.cosc.brocku.ca/~efoxwell/2P95-2016/code/09/slide21/howalarming.cpp" 2>/dev/null) <(wget -O - "https://www.cosc.brocku.ca/~efoxwell/2P95/code/09/slide21/howalarming.cpp" 2>/dev/null)
