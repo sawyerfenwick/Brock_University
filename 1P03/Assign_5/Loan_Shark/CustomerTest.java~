@@ -1,0 +1,13 @@
+package Loan_Shark;
+
+import BasicIO.*;
+
+public class CustomerTest { 
+ 
+  public CustomerTest ( ) {
+    
+    
+  }
+  
+  
+}

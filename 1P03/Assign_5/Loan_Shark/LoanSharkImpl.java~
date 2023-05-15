@@ -1,0 +1,11 @@
+package Loan_Shark;
+
+
+import java.io.*;
+import BasicIO.*;
+
+
+public class LoanSharkImpl implements LoanShark, Serializable {
+  
+  
+}

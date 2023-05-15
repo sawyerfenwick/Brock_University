@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<drjava version="drjava-20160913-225446">
+  <project autorefresh="false" build="" root="" work="">
+    <createjar file=""/>
+    <source>
+      <file active="true" name="RateImpl.java" package="Loan_Shark" timestamp="07-Apr-2017 14:11:58">
+        <select from="1228" to="1228"/>
+        <scroll column="684" row="0"/>
+      </file>
+      <file name="LoanSharkIterator.java" package="Loan_Shark" timestamp="07-Apr-2017 00:36:59">
+        <select from="1228" to="1228"/>
+        <scroll column="684" row="0"/>
+      </file>
+      <file name="Customer.java" package="Loan_Shark" timestamp="07-Apr-2017 01:06:12">
+        <select from="1228" to="1228"/>
+        <scroll column="684" row="0"/>
+      </file>
+      <file name="CustomerImpl.java" package="Loan_Shark" timestamp="07-Apr-2017 01:30:38">
+        <select from="1228" to="1228"/>
+        <scroll column="684" row="0"/>
+      </file>
+      <file name="CustomerTest.java" package="Loan_Shark" timestamp="07-Apr-2017 02:20:36">
+        <select from="1228" to="1228"/>
+        <scroll column="684" row="0"/>
+      </file>
+      <file name="CustomerForm.java" package="Loan_Shark" timestamp="07-Apr-2017 13:32:38">
+        <select from="1228" to="1228"/>
+        <scroll column="684" row="0"/>
+      </file>
+      <file name="Rate.java" package="Loan_Shark" timestamp="07-Apr-2017 14:08:51">
+        <select from="1228" to="1228"/>
+        <scroll column="684" row="0"/>
+      </file>
+      <file name="MonthEndReport.java" package="Loan_Shark" timestamp="07-Apr-2017 14:15:01">
+        <select from="1228" to="1228"/>
+        <scroll column="684" row="0"/>
+      </file>
+      <file name="MonthEnd.java" package="Loan_Shark" timestamp="07-Apr-2017 14:15:24">
+        <select from="1228" to="1228"/>
+        <scroll column="684" row="0"/>
+      </file>
+      <file name="LoanShark.java" package="Loan_Shark" timestamp="07-Apr-2017 15:30:33">
+        <select from="1228" to="1228"/>
+        <scroll column="684" row="0"/>
+      </file>
+      <file name="LoanSharkImpl.java" package="Loan_Shark" timestamp="07-Apr-2017 15:30:33">
+        <select from="1228" to="1228"/>
+        <scroll column="684" row="0"/>
+      </file>
+    </source>
+    <included/>
+    <excluded/>
+    <collapsed/>
+    <classpath/>
+    <breakpoints/>
+    <watches/>
+    <bookmarks/>
+    <preferences/>
+  </project>
+</drjava>

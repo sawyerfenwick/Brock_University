@@ -1,0 +1,65 @@
+package Loan_Shark;
+
+
+import java.io.*;
+import BasicIO.*;
+
+public class CustomerImpl implements Customer, Serializable {
+  
+  private static final long serialVersionUID = 99990001L;
+  
+  private LoanShark theShark; // 
+  private String lnNum;
+  private String name;
+  private double prevBalance;
+  private double newBalance;
+  private double debits;
+  private double credits;
+  private double interest;
+  private double minPay;
+  
+  public CustomerImpl ( ASCIIDataFile file, LoanShark l ) {
+    
+  }
+  
+    public String getLnNum ( ) {
+      
+      return lnNum;
+    } //getLnNum
+    
+    public String getName ( ) {
+      
+      return name;
+    } //getName
+    
+    public double getPrevBalance ( ) {
+      
+      return prevBalance;
+    } //getPrevBalance
+    
+    public double getNewBalance ( ) {
+      
+      return newBalance;
+    } //getNewBalance
+    
+    public double getMonthlyDebits ( ) {
+      
+      return debits;
+    } //getMonthlyDebits
+    
+    public double getMonthlyCredits ( ) {
+      
+      return credits;
+    } //getMonthlyCredits
+    
+    public double getInterest ( ) {
+      
+      return interest;
+    } //getInterest
+    
+    public double getMinPay ( ) { 
+      
+      return minPay;
+    } //getMinPay
+    
+} //CustomerImpl

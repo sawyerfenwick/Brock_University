@@ -1,0 +1,19 @@
+package Loan_Shark;
+
+import java.io.*;
+import BasicIO.*;
+
+public interface Rate {
+  
+  public double getRates ( ASCIIDataFile file );
+  
+  public double calcMinPay ( double mp );
+  
+  public double calcPrevPlus ( double prev, double deb, double cred );
+  
+  public double calcInterest ( double prevPlus );
+  
+  public double calcNewBalance ( double prevPlus, double interest ); 
+  
+  
+}

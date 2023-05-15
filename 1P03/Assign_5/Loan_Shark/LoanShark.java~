@@ -1,0 +1,7 @@
+package Loan_Shark;
+
+public interface LoanShark /*extends Iterable<Customer>*/{
+  
+  
+  
+}

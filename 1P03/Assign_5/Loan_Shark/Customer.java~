@@ -1,0 +1,22 @@
+package Loan_Shark;
+
+public interface Customer {
+ 
+  public String getLnNum ( ) ;
+  
+  public String getName ( );
+  
+  public double getPrevBalance ( );
+  
+  public double getNewBalance ( );
+  
+  public double getMonthlyDebits ( );
+  
+  public double getMonthlyCredits ( );
+  
+  public double getInterest ( );
+  
+  public double getMinPay ( );
+  
+  
+}

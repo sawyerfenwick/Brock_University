@@ -1,0 +1,5 @@
+package Loan_Shark;
+
+class LoanSharkIterator /*implements Iterator<Customer>*/ {
+  
+}

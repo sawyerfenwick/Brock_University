@@ -1,0 +1,91 @@
+package Loan_Shark;
+
+
+import java.io.*;
+import BasicIO.*;
+
+public class RateImpl implements Rate, Serializable {
+  
+  private ASCIIDataFile file;
+  private double rate;
+  private double minPay;
+  private double prevPlus;
+  private double interest;
+  private double newBalance;
+  private double lowRate;
+  private double firstTier;
+  private double medRate;
+  private double secondTier;
+  private double highRate;
+  private double minPayRate;
+  
+  public RateImpl ( ) {
+    
+    file = new ASCIIDataFile();
+    
+    while( !file.isEOF() ){
+      
+      lowRate = getRates(file);
+      firstTier = getRates(file);
+      medRate = getRates(file);
+      secondTier = getRates(file);
+      highRate = getRates(file);
+      minPayRate = getRates(file);
+      
+    }
+    
+    
+  } //constructor
+  
+  public double getRates ( ASCIIDataFile file ){
+    
+    rate = file.readDouble();
+    
+    return rate;
+  } //getRates
+  
+  public double calcMinPay ( double mp ){ 
+    
+    minPay = minPayRate*mp;
+    
+    return minPay;
+  } //calcMinPay
+  
+  public double calcPrevPlus ( double prev, double deb, double cred ){
+    
+    prevPlus = prev + deb - cred;
+    
+    return prevPlus;
+  } //calcPrevPlus
+  
+  
+  public double calcInterest ( double prevPlus ){
+    
+    if( prevPlus <= firstTier) {
+      
+      interest = prevPlus*lowRate;
+      
+    }
+    else if ( prevPlus <= secondTier ) {
+    
+      interest = (lowRate*firstTier) + (medRate*(prevPlus - firstTier));
+      
+    }
+    else {
+     
+      interest = (lowRate*firstTier) + (medRate*(secondTier - firstTier)) + (highRate*(prevPlus - secondTier));
+      
+    }
+    
+    return interest;
+  } //calcInterest
+  
+  public double calcNewBalance ( double prevPlus, double interest ){
+    
+    newBalance = prevPlus + interest;
+    
+    return newBalance;
+  } //newBalance
+  
+  
+}
