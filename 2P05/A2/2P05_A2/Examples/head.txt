@@ -1,0 +1,10 @@
+this
+file
+has
+several
+lines
+to
+show
+the 
+head
+command
