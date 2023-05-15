@@ -1,0 +1,14 @@
+/*Sawyer_Fenwick
+6005011
+sf15zx
+Assign4*/
+/*For print media*/
+body{
+	visibility:hidden;
+}
+.hide-button{
+	visibility:hidden;
+}
+.print{
+	visibility:visible;
+}

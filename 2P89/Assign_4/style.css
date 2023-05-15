@@ -1,0 +1,122 @@
+/*Sawyer_Fenwick
+6005011
+sf15zx
+Assign4*/
+/* Add a black background color to the top navigation */
+body{
+	margin-bottom:100px;
+	background-color:#D8D6D5;
+}
+.hide {
+	position:absolute; 
+	top: -1px;
+	left: -1px;
+	width: 1px;
+	height: 1px;
+}
+span.online {
+	color:green;
+}
+span.offline {
+	color:red;
+}
+p.centertext {
+	color:red;
+	margin-left:auto;
+	margin-right:auto;
+	width:12em
+}
+
+div.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+div.navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+div.navbar a:hover {
+  background-color: gray;
+  color: white;
+}
+
+/* Add a color to the active/current link */
+div.navbar a.active {
+  background-color: gray;
+  color: white;
+}
+
+/* Right-aligned section inside the top navigation */
+div.navbar-right {
+  float: right;
+}
+
+div.picborder {
+  border: 2px solid #ccc;
+  text-align: center;
+}
+
+div.picborder:hover {
+  border: 2px solid #777;
+}
+
+div.picborder img {
+  width: 100%;
+  
+}
+
+div.info {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#outer-div {
+	width: 100%;
+	text-align: center;
+}
+#inner-div {
+	display: inline-block;
+	margin: 0 auto;
+	padding: 3px;
+}
+
+#CocaCola{
+	background-color:#fe001a;
+}
+#Pepsi{
+	background-color:#005CB4;
+}
+#Sprite{
+	background-color:#008B47;
+}
+#Crush{
+	background-color:#aa9ac4;
+}
+#DrPepper{
+	background:#af002a;
+}
+
+
+.screensize {
+  padding: 50px;
+  float: left;
+  width: 33.33%;
+}
+/**Adjusts the images to stack when on mobile**/
+@media only screen and (max-width: 600px) {
+  .screensize {
+    width: 100%;
+  }
+}
