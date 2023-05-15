@@ -1,0 +1,128 @@
+/*Sawyer_Fenwick*/
+/*6005011*/
+/*sf15zx*/
+/*Assign_1*/
+
+/**Navbar CSS**/
+ul.navbar {
+	list-style-type: none;
+  	margin: 0;
+ 	padding: 0;
+  	overflow: hidden;
+  	background-color: #333;
+}
+
+ul.navbar li {
+  float: left;
+}
+
+ul.navbar li a {
+  	display: block;
+  	color: white;
+  	text-align: center;
+  	padding: 14px 16px;
+  	text-decoration: none;
+}
+
+ul.navbar li a:hover:not(.active) {
+ 	background-color:gray;
+}
+
+ul.navbar li a.active {
+  	background-color:gray;
+}
+/**Adjusts the navbar to horizontal when on mobile**/
+@media screen and (max-width: 600px){
+	ul.navbar li {
+		float:none;
+	}
+}
+/**Navbar CSS end**/
+/**Images CSS**/
+div.picborder {
+  border: 2px solid #ccc;
+}
+
+div.picborder:hover {
+  border: 2px solid #777;
+}
+
+div.picborder img {
+  width: 100%;
+  
+}
+
+div.info {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.screensize {
+  padding: 50px;
+  float: left;
+  width: 33.33%;
+}
+/**Adjusts the images to stack when on mobile**/
+@media only screen and (max-width: 600px) {
+  .screensize {
+    width: 100%;
+  }
+}
+/**Images CSS end**/
+/**General Theme CSS**/
+@font-face{
+	font-family:'Classic';
+	src: url('PressStart2P.ttf');
+}
+
+#titlestyle{
+	font-family:'Classic';
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+/**Omnipresent Footer**/
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 2.5rem;            /* Footer height */
+}
+body{
+	background-color:#D8D6D5;
+}
+
+#hp{
+	background-color:#0096D6; 
+}
+
+#canon{
+	background-color:#BC0024; 
+}
+
+#brother{
+	background-color:#005CAB;
+}
+/**General Theme CSS end**/
+/**Print Media Rules**/
+@media print {
+    p.bodyText {
+		font-family:georgia, times, serif;
+	}
+	p.bodyText {
+		font-size:10pt
+	}
+}
+/**Print Media Rules end**/
+      
