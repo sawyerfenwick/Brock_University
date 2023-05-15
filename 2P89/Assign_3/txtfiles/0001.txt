@@ -1,0 +1,5 @@
+0001
+CocaCola
+1.99
+coke.png
+The Coca-Cola Company is a beverage retailer, manufacturer and marketer of non-alcoholic beverage concentrates and syrups. The company's flagship product is Coca-Cola, but it offers more than 500 brands in over 200 countries or territories and serves 1.6bn servings each day.
