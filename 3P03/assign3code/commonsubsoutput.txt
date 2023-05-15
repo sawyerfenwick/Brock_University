@@ -1,0 +1,7 @@
+run:
+Please enter the first string: 
+ASDLKJFDSL
+Please enter the second string: 
+SDLKFJDSL
+Length of largest common substring is 8
+BUILD SUCCESSFUL (total time: 4 seconds)

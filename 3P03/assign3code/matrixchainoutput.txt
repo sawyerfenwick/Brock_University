@@ -1,0 +1,9 @@
+run:
+Please enter the number of matrices to bemultiplied (n): 
+4
+Please enter dimensions of the matrices.
+R0=20
+R1=25
+R2=15
+R3=10
+(M1(M2M3))BUILD SUCCESSFUL (total time: 16 seconds)
