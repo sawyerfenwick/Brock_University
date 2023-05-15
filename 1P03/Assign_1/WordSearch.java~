@@ -1,0 +1,117 @@
+package Assign_1;
+
+import BasicIO.*;
+
+public class WordSearch {
+  
+  private ASCIIDataFile pData;
+  private ASCIIDisplayer display;
+  
+  private char[] [] puzzle;
+  
+  public WordSearch( ) {
+    pData = new ASCIIDataFile();
+    display = new ASCIIDisplayer();
+    loadPuzzle();
+    displayPuzzle();
+    //check();
+    pData.close();
+    display.close();
+    
+  }; // constructor
+  
+  private void loadPuzzle(){
+    
+    int x = pData.readInt();
+    int y = pData.readInt();
+    
+    puzzle = new char[x][y];
+    
+    for(int i = 0; i < puzzle.length; i ++){
+      for(int j = 0; j < puzzle[i].length; j ++){
+        
+        puzzle[i][j] = pData.readChar();
+        
+      }
+    }
+    
+    String word = pData.readString();
+    check( word);
+    
+    
+  }; // loadPuzzle
+  
+  private void check(String word){
+    
+    int x = 0;
+    int y = 0;
+    
+    checkRight(x, y, word);
+    /* if(){break};
+     checkLeft();
+     if(){break};
+     checkUp();
+     if(){break};
+     checkDown();
+     if(){break};
+     checkUpRight();
+     if(){break};
+     checkDownLeft();
+     if(){break};
+     checkUpLeft();
+     if(){break};
+     checkDownRight();
+     
+     */
+  } // check
+  
+  private void displayPuzzle(){
+    
+    for(int i = 0; i < puzzle.length; i ++){
+      for(int j = 0; j < puzzle[i].length; j ++){
+        
+        display.writeChar(puzzle[i][j]);
+        
+      }
+      display.newLine();
+    }
+    display.newLine();
+    display.writeString("Right");
+  }; // displayPuzzle
+  
+  private boolean checkRight ( int x, int y, String word ) { 
+    
+    boolean result;
+    result = true;
+    
+    return result; 
+  } // searchRight
+  
+  private boolean[] makeChecker ( ) {
+    
+    boolean[]  result;
+    
+    result = new boolean[puzzle.length+1];
+    for ( int i=1 ; i<result.length ; i++ ) {
+      result[i] = false;
+    };
+    return result;
+    
+  };  // makeChecker
+  
+  
+  private boolean evalChecker ( boolean[] checker ) {
+    
+    boolean result;
+    
+    result = true;
+    for ( int i=1 ; i<checker.length ; i++ ) {
+      result = result & checker[i];
+    };
+    return result;
+    
+  };  // evalChecker
+  
+  public static void main ( String[] args ) { WordSearch w = new WordSearch(); };
+  
+} // Sudoku
