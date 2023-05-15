@@ -1,0 +1,16 @@
+//I moved the file.txt outside of where I keep the MARS.exe to test if it would throw the file failed //to open condition
+
+Error: File Failed To Open
+-- program is finished running --
+
+//With the file.txt in the correct location
+
+21.45 blah blah blah 43.0003 61 and 0.03
+21.45 43.0003 0.030000001 
+-- program is finished running --
+
+//second output with my own input file "input.txt" (included in the submission)
+
+26.661 45 25 78.45 37.8 words words words 87.888 945.1 input 9.326565
+26.661001 78.45 37.8 87.888 945.1 9.326564 
+-- program is finished running --

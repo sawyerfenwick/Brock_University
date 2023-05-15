@@ -1,0 +1,10 @@
+//I moved the file.txt outside of where I keep the MARS.exe to test if it would throw the file failed //to open condition
+
+Error: File Failed To Open
+-- program is finished running --
+
+//With the file.txt in the correct location
+
+21.45 blah blah blah 43.0003 61 and 0.03
+21.45 43.0003 0.030000001 
+-- program is finished running --

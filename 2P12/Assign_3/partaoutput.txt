@@ -1,0 +1,19 @@
+Please Enter A Non-negative Value: 5
+5
+*****
+-- program is finished running --
+
+Please Enter A Non-negative Value: 4
+4
+****
+-- program is finished running --
+
+Please Enter A Non-negative Value: 9
+9
+*********
+-- program is finished running --
+
+Please Enter A Non-negative Value: 0
+0
+
+-- program is finished running --

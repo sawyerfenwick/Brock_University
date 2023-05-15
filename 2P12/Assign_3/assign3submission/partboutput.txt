@@ -1,0 +1,31 @@
+Enter 0 To Exit.
+Please Enter An Integer Greater Than Or Equal To 3: 1
+Error: Integer Is Not Greater Than Or Equal To 3. Please Try Again.
+Enter 0 To Exit.
+Please Enter An Integer Greater Than Or Equal To 3: 3
+Please Enter A Character: a
+aaa
+a a
+aaa
+Enter 0 To Exit.
+Please Enter An Integer Greater Than Or Equal To 3: 4
+Please Enter A Character: b
+bbbb
+b  b
+b  b
+bbbb
+Enter 0 To Exit.
+Please Enter An Integer Greater Than Or Equal To 3: 8
+Please Enter A Character: c
+cccccccc
+c      c
+c      c
+c      c
+c      c
+c      c
+c      c
+cccccccc
+Enter 0 To Exit.
+Please Enter An Integer Greater Than Or Equal To 3: 0
+
+-- program is finished running --

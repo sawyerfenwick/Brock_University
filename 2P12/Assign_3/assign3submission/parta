@@ -1,0 +1,53 @@
+	#Sawyer Fenwick 6005011
+	#COSC 2P12 Assign_3
+	#PART A
+	#This code asks the user for input and returns the number they inputed (n) and prints n stars.
+	#If the number entered is negative it asks the user to input a different number.
+	
+	.data
+msg: 	.asciiz "Please Enter A Non-negative Value: "
+err:	.asciiz "Error: Value Is Negative. Please Try Again."
+star:	.asciiz "*"	
+	.text
+main:	
+	li $t2, 0	#temporary variable for "loop" (line 32)
+
+	la $a0, msg	#loads a0 with msg
+	li $v0, 4	#syscall print_str (asking user for input)
+	syscall
+	
+	li $v0, 5	#syscall read_int (recieving user input)
+	syscall
+	
+	blt $v0, $t2, error	#if integer read is negative goto error
+	
+	la $a0, ($v0)	#loading a0 with contents of v0 (user input)
+	la $t1, ($v0)	#loading t1 with contents of v0 to use in for loop later
+	li $v0, 1	#syscall print_int (printing input)
+	syscall
+	
+	li $a0, 10	#loading a0 with newline char
+	li $v0, 11	#syscall print_char
+	syscall 
+loop:
+	beq $t1, $t2, exit	#when t2 == t1 break
+	addi $t2, $t2, 1	#incrememnt counter
+	
+	la $a0, star		#load a0 with star
+	li $v0, 4		#syscall print_str
+	syscall
+	
+	j loop			#repeat (goto line 32)
+error:
+	la $a0, err	#load a0 with contents of err
+	li $v0, 4	#syscall print_str
+	syscall
+	
+	li $a0, 10	#load a0 with newline char
+	li $v0, 11	#syscall print_char
+	syscall
+	
+	j main		#return to main method
+exit:	
+	li $v0, 10		#syscall exit
+	syscall	

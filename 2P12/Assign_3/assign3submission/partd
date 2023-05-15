@@ -1,0 +1,155 @@
+	#Sawyer Fenwick 6005011
+	#COSC 2P12 Assign_3
+	#PART D
+	#This function reads data off a text file, then finds and prints the floating point numbers 
+	#that are on the file. 
+	
+		.data
+fileName:	.asciiz "file.txt"
+error1:		.asciiz "Error: File Failed To Open"
+FILE:		.word
+buffer:		.space 1000
+zero:		.asciiz "0"
+nine:		.asciiz "9"
+		.text
+main:
+	la $a0 fileName 	#Call the file open procedure
+	jal openfile
+	sb $v0, FILE
+
+	#read the entire contents of the file to buffer	
+	li $v0, 14
+	lb $a0, FILE
+	la $a1, buffer
+	li $a2, 999
+	syscall
+	#close file	
+	li $v0, 16
+	lb $a0, FILE
+	syscall
+	#print file
+	la $a0, buffer
+	li $v0, 4
+	syscall
+	#print newline
+	li $a0, 10
+	li $v0, 11
+	syscall
+	
+	li $t8, 0	#set t8 to 0 (counter)
+	li $t5, 0	#set t5 to 0 (n)
+	
+	la $t2, buffer	#load t2 with the first char of the buffer
+	jal getint	#get the first integer
+nextint:
+	beqz $v1, end	#test v1 to see if we could read a digit
+	
+	jal convert	#convert the integer back to a float
+	li $t5, 0	#reset n
+	li $t8, 0	#reset i
+	jal getint	#get the next integer
+	b nextint	#loop
+end:
+	li $v0, 10	#syscall exit
+	syscall
+getint:
+	lb $t7, nine		#Loads t7 with the character nine
+	lb $t3, zero     	#Loads t3 with the character zero
+	
+	move $t9, $0		# $t9 is used as a flag if we can at least read 1 digit
+	move $t6, $0    	#clear out register
+	
+	lb $t1, ($t2)    	#get first char of string
+skipLead:
+	beqz $t1, exit    	#detects a char 0 and exits.
+	bgt $t1, $t7, nextChar	#if char is not a digit
+	blt $t1, $t3, nextChar	#skip and read next char
+	b endLead            	#we found a digit						
+nextChar:
+        add $t2, $t2, 1		#inc pointer into i/p string													
+	lb $t1, ($t2)		#read the char
+	b skipLead		#restart loop
+endLead:																
+																																																
+loop:	
+	li $t9, 1     		#Here is the flag we set if we read at least 1 digit
+	sub $t4, $t1, $t3    	#convert that char to a number by subtracting char zero from it.
+	add $t2, $t2, 1      	#increment pointer into i/p string
+	
+	mul $t6, $t6, 10	#convert to integer  10xvalue + last_digit	
+	add $t6, $t6, $t4
+
+	lb $t1, ($t2)		#get next char
+	
+	beq $t1, 32, skip	#space was read before a decimal, number is true integer and not a float
+	beq $t1, 46, next	#if t1 is a decimal weve found a float, skip the decimal and add the rest of the number to our integer (convert later)
+	bgt $t1, $t7, exit	#only stay in the loop if next char
+	blt $t1, $t3, exit	#is a digit
+
+	b loop			#do it again
+skip:
+	j getint		#get the next integer
+next:
+	add $t2, $t2, 1		#increment pointer
+	lb $t1, ($t2)		#get next char
+	bgt $t1, $t7, exit	#continue if next char is a digit
+	blt $t1, $t3, exit
+count:
+	li $t9, 1		#same as above "loop", only added the incrementer for n and removed the beq checks. Only care about when the 
+	sub $t4, $t1, $t3	#number ends since we know it is a float
+	add $t2, $t2, 1
+	addi $t5, $t5, 1	#increment n by 1
+	
+	mul $t6, $t6, 10	#convert to integer  10xvalue + last_digit	
+	add $t6, $t6, $t4
+	
+	lb $t1, ($t2)		#get next char
+	bgt $t1, $t7, exit	#only stay in the loop if next char
+	blt $t1, $t3, exit	#is a digit
+
+	b count			#do it again
+exit:
+	move $t1, $t6		#move integer to return register t1
+	move $v1, $t9 		#move Flag to return register v1
+	jr $ra	
+convert:
+	mtc1 $t1, $f1		#move t1 to a floating point register
+	cvt.s.w $f1, $f1	#convert it into a single precision
+
+	li $t1, 10		#move 10 into t1
+	mtc1 $t1, $f2		#move t1 to a floating point register
+	cvt.s.w $f2, $f2	#convert it into a single precision 10.0
+convertloop:
+	beq $t5, $t8, print	#if n = i, we are done dividing, print the float
+	addi $t8, $t8, 1	#increment counter i++
+
+	div.s $f1, $f1, $f2	#divide our integer by 10.0
+	
+	b convertloop		#loop
+print:
+	mov.s $f12, $f1		#move the float into f12 for printing
+	li $v0, 2		#syscall print_float
+	syscall
+	
+	li $a0, 32		#set a0 to space char
+	li $v0, 11		#syscall print_char
+	syscall
+	
+	jr $ra			#return
+openfile: 	
+	#Open a file for read only
+	la $a0, fileName      	#name of file to open
+	li $a1, 0             	#read only
+	li $a2, 0 	      	#mode is ignored
+	li $v0, 13
+	syscall
+	move $s1, $v0
+	
+	#Test if the file was open
+	bgez $v0, skiperror
+	la $a0, error1
+	li $v0, 4
+	syscall
+skiperror:
+	move $v0, $s1		#set s1 to v0
+	jr $ra			#return

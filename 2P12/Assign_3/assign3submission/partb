@@ -1,0 +1,86 @@
+	#Sawyer Fenwick 6005011
+	#COSC 2P12 Assign_3
+	#PART B
+	#This program asks user for input n and input ch, then prints a hollow square matrix 
+	#of size nxn using the characters ch the user inputed. If user enters 0 program ends.
+	
+	.data
+msg:	.asciiz "Please Enter An Integer Greater Than Or Equal To 3: "
+msg2:	.asciiz "Please Enter A Character: "
+msg3:	.asciiz "Enter 0 To Exit."
+err:	.asciiz "Error: Integer Is Not Greater Than Or Equal To 3. Please Try Again."	
+	.text
+main:
+	li $t1, 0 	#temporary variable for "square"
+	
+	la $a0, msg3	#load a0 with contents of msg3
+	li $v0, 4	#syscall print_str
+	syscall
+	
+	li $a0, 10	#load a0 with newline ascii char
+	li $v0, 11	#syscall print_char
+	syscall
+	
+	la $a0, msg	#load a0 with contents of msg
+	li $v0, 4	#syscall print_str
+	syscall
+	
+	li $v0, 5	#syscall read_int
+	syscall
+	
+	la $t3, ($v0)		#load t3 with v0 for access later
+	beqz $t3, exit		#if value is 0 exit
+	blt $t3, 3, error	#if value entered by user is not gtoe to 3 goto "error"
+	
+	la $a0, msg2	#load a0 with contents of msg2
+	li $v0, 4	#syscall print_str
+	syscall
+	
+	li $v0, 12	#syscall read_char
+	syscall
+	
+	la $t4, ($v0)	#load contents of v0 to t4 for hollow square later
+outer:
+	li $a0, 10	#load a0 with newline char
+	li $v0, 11	#syscall print_char
+	syscall
+	
+	beq $t1, $t3, main	#when t1 == t3 break
+	addi $t1, $t1, 1	#incrememt counter
+	
+	li $t2, 0		#reset t2 to 0
+inner:	
+	beq $t2, $t3, outer	#when t2 == t3 return to outer loop
+	addi $t2, $t2, 1	#incrememt counter
+	
+	beq $t1, 1, print		#if i = 0 print a character
+	beq $t2, 1, print		#if j = 0 print a character
+	beq $t1, $t3, print	#if i = n print a character
+	beq $t2, $t3, print	#if j = n print a character
+	
+	#if all above statements fail, print a blank
+	
+	li $a0, 32	#loads a0 with space character
+	li $v0, 11	#syscall print_char
+	syscall
+	
+	j inner		#repeat
+error:
+	la $a0, err	#load a0 with contents of err
+	li $v0, 4	#syscall print_str
+	syscall
+	
+	li $a0, 10	#load a0 with newline char
+	li $v0, 11	#syscall print_char
+	syscall
+	
+	j main		#goto main
+print:
+	la $a0, ($t4)	#load a0 with char from user input
+	li $v0, 11	#syscall print_char
+	syscall
+	
+	j inner		#return to top of inner loop
+exit:
+	li $v0, 10	#syscall exit
+	syscall
