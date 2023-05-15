@@ -1,0 +1,15 @@
+package Assign_2;
+
+class Node{
+  
+  Job item; //job to be printed
+  Node next; //next node
+  
+  Node (Job j, Node n){
+    
+    item = j;
+    next = n;
+    
+  } //constructor 
+  
+} //Node

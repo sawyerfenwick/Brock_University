@@ -1,0 +1,44 @@
+package Assign_2;
+
+import BasicIO.*;
+
+public class Job{
+  
+  public static final String[] PRIORITY = {"Students" , "Staff" , "Faculty"};
+  
+  private String desc;
+  private String name;
+  private int pages;
+  private int priority;
+  
+  public Job(BasicForm form){
+    
+    desc = form.readString("description");
+    name = form.readString("send");
+    pages = form.readInt("pages");
+    priority = form.readInt("priority");
+    
+  } //constructor
+  
+  public String getDescription(){
+    
+    return desc;
+  } //getDescription
+  
+  public String getName(){
+    
+    return name;
+  } //getName
+  
+  public int getPages(){
+    
+    return pages;
+  } //getPages
+  
+  public int getPriority(){
+    
+    return priority;
+  } //getPriority
+  
+    
+} //Job
